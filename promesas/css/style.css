@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(237, 214, 100);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  width: 20px;
+  height: 25px;
+}
+
+.card {
+  background-color: #f6f6f6;
+  padding: 20px;
+  border-radius: 20px;
+}
+img {
+  border-radius: 25px;
+  width: auto;
+  height: auto;
+}
