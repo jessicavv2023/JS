@@ -206,24 +206,42 @@ let producto = [
     rating: { rate: 3.6, count: 145 },
   },
 ];
-//producto = null;
-// get producto
-function getProducto() {
+const cardsContainer = document.getElementById("cartas");
+
+producto.forEach((producto) => {
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  const image = document.createElement("img");
+  image.src = producto.image;
+  image.alt = producto.title;
+
+  const title = document.createElement("h3");
+  title.textContent = producto.title;
+
+  const price = document.createElement("p");
+  price.textContent = `$${producto.price}`;
+
+  const description = document.createElement("p");
+  description.textContent = producto.description;
+
+  card.appendChild(image);
+  card.appendChild(title);
+  card.appendChild(price);
+  card.appendChild(description);
+  cardsContainer.appendChild(card);
+});
+const getProducto = () => {
   return new Promise((resolve, reject) => {
     if (producto == null) {
-      reject(new Error("Producto no existente"));
-    } // if ==null
-
+      reject(new Error("Prodcuto equivocado"));
+    }
     setTimeout(() => {
       resolve(producto);
-    }, 2000); // new Promise
+    }, 2000);
   });
-}
-//onsole.log(getProducto());
+};
+
 getProducto()
   .then((prod) => console.log(prod))
   .catch((err) => console.log(err.message));
-///
-const card = document.querySelector(".card");
-const productId = card.dataset.id;
-////

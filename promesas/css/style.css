@@ -4,20 +4,38 @@ body {
 
 main {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
-  width: 20px;
-  height: 25px;
+  gap: 1px;
+  padding: 20px;
+  margin: 50px auto; /* Establece un margen superior e inferior de 50px y los lados izquierdo y derecho en automático para centrar el contenedor */
 }
 
 .card {
-  background-color: #f6f6f6;
+  background-color: #f5f0f0;
   padding: 20px;
   border-radius: 20px;
+  display: flex;
+
+  width: 50%;
+  flex-basis: calc(3% - 10px); /* ajusta el valor según tus necesidades */
+  flex: 1;
+  min-width: 363px;
 }
+
 img {
   border-radius: 25px;
-  width: auto;
-  height: auto;
+  width: 205px;
+  height: 277px;
+}
+#cartas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+.h1 {
+  margin-top: -50px;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
