@@ -2,40 +2,106 @@ body {
   background-color: rgb(237, 214, 100);
 }
 
-main {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  padding: 20px;
-  margin: 50px auto; /* Establece un margen superior e inferior de 50px y los lados izquierdo y derecho en automático para centrar el contenedor */
-}
-
 .card {
-  background-color: #f5f0f0;
+  background-color: #ffffff;
   padding: 20px;
-  border-radius: 20px;
-  display: flex;
-
-  width: 50%;
-  flex-basis: calc(3% - 10px); /* ajusta el valor según tus necesidades */
-  flex: 1;
+  border-radius: 27px;
   min-width: 363px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.672);
 }
 
 img {
   border-radius: 25px;
-  width: 205px;
-  height: 277px;
+  width: 179px;
+  height: 220px;
 }
 #cartas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
 }
-.h1 {
-  margin-top: -50px;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.2;
+h1 {
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 90px;
+}
+button {
+  color: rgb(255, 255, 255);
+  background-color: rgb(41, 59, 255);
+  border-radius: 10px;
+  font-size: 19px;
+  position: absolute;
+  bottom: 14px;
+  right: 89px;
+  width: 212px;
+  height: 37px;
+}
+h2 {
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 30px;
+}
+.card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card .text-container {
+  height: 180px;
+  overflow: hidden;
+}
+p {
+  color: #000000;
+  font-family: Arial;
+  font-size: 15px;
+  margin-bottom: 3rem;
+}
+h3 {
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 20px;
+}
+.navbar-nav {
+  background-color: rgb(255, 255, 255);
+  width: auto;
+  height: 124px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.categorias {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.categorias__lista {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categorias__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.categorias__item a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.categorias__item a:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+  cursor: pointer;
 }

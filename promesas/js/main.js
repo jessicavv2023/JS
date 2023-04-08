@@ -225,12 +225,46 @@ producto.forEach((producto) => {
   const description = document.createElement("p");
   description.textContent = producto.description;
 
+  const addToCartButton = document.createElement("button");
+  addToCartButton.textContent = "Agregar al carrito";
+
   card.appendChild(image);
   card.appendChild(title);
   card.appendChild(price);
   card.appendChild(description);
+  card.appendChild(addToCartButton); // Agrega el botón a la tarjeta
+
   cardsContainer.appendChild(card);
 });
+
+const categorias = producto.filter((prod, index, arr) => {
+  return arr.findIndex((t) => t.category === prod.category) === index;
+});
+
+const nav = document.createElement("nav");
+nav.classList.add("categorias");
+
+const ul = document.createElement("ul");
+ul.classList.add("categorias__lista");
+
+categorias.forEach((categoria) => {
+  const li = document.createElement("li");
+  li.classList.add("categorias__item");
+
+  const a = document.createElement("a");
+  a.href = "#";
+  a.textContent = categoria.category;
+  a.addEventListener("click", () => {
+    // Código para filtrar productos por categoría
+  });
+
+  li.appendChild(a);
+  ul.appendChild(li);
+});
+
+nav.appendChild(ul);
+document.body.prepend(nav);
+
 const getProducto = () => {
   return new Promise((resolve, reject) => {
     if (producto == null) {
